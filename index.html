@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drawing Pikachu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://lib.baomitu.com/highlight.js/9.13.1/styles/monokai-sublime.min.css" rel="stylesheet">
+    <style id="style"></style>
+</head>
+<body>
+    <div class="editor">
+        <pre class="css">
+            <code id="code" class="hljs"></code>
+        </pre>            
+    </div>
+    <div class="canvas">
+        <div class="pikachu">
+            <div class="leftEye eyes"></div>
+            <div class="rightEye eyes"></div>
+            <div class="leftCheek cheeks"></div>
+            <div class="rightCheek cheeks"></div>
+            <div class="nose"></div>
+            <div class="mouthWrapper">
+                <div class="mouth"></div>
+            </div>
+            <div class="leftLip lips"></div>
+            <div class="rightLip lips"></div>
+        </div>    
+    </div>
+    <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://lib.baomitu.com/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="main.js"></script>
+</body>
+</html>
