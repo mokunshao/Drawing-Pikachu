@@ -1,11 +1,19 @@
 !function(){
 
 let css = `
+/* 首先准备比卡丘的皮 */
+
+.canvas{
+    background: #fee433;
+}
+
 .pikachu{
     position: relative;
     width: 100%;
     height: 165px;
 }
+
+/* 然后画鼻子 */
 
 .nose{
     width: 0px;
@@ -20,6 +28,8 @@ let css = `
     transform: translateX(-50%);
 }
 
+/* 画眼睛 */
+
 .eyes{
     width: 49px;
     height: 49px;
@@ -28,6 +38,8 @@ let css = `
     border-radius: 50%;
     border: 2px black solid;
 }
+
+/* 画眼珠 */
 
 .eyes::before{
     content: '';
@@ -51,6 +63,8 @@ let css = `
     margin-left: 90px;
 }
 
+/* 画脸颊 */
+
 .cheeks{
     height: 68px;
     width: 68px;
@@ -70,6 +84,8 @@ let css = `
     left: 50%;
     margin-left: 116px;
 }
+
+/* 画上唇 */
 
 .lips{
     position: absolute;
@@ -110,6 +126,8 @@ let css = `
     overflow: hidden;
 }
 
+/* 画嘴巴 */
+
 .mouth{
     width: 139px;
     height: 1000px;
@@ -123,6 +141,8 @@ let css = `
     overflow: hidden;
 }
 
+/* 画舌头 */
+
 .mouth::after{
     content: '';
     position: absolute;
@@ -134,11 +154,32 @@ let css = `
     transform: translateX(50%);
     border-radius: 50%;
 }
+
+/* 这就是我画的比卡丘，谢谢观看 */
+
 `
+
+let duration = 50;
+
+$('.actions > button').on('click',function(e){
+    let button = e.currentTarget;
+    $(button).addClass('active').siblings('.active').removeClass('active');
+    let speed = $(button).attr('data-speed')
+    switch(speed){
+        case 'slowSpeed':
+        duration = 100;
+        break;
+        case 'mediumSpeed':
+        duration = 50;
+        break;
+        case 'fastSpeed':
+        duration = 20;
+        break;
+    }
+})
 
 function writeCSS(contents){
     let n = 0;
-    let duration = 10;
     let writing;
     hljs.initHighlighting();
     writing = setTimeout(function run(){

@@ -40,8 +40,29 @@ code{
 .canvas{
     height: 50%;
     /* height: 50vh; */
-    background: #fee433;
+    /* background: #fee433; */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.actions{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.actions > button{
+    padding: 8px;
+    background: #eee;
+    outline: none;
+    margin: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.actions > button.active{
+    background: #aaa;
 }
